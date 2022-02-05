@@ -1085,6 +1085,16 @@
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.5.tgz#77211291c1900a700b8a78cfafda3160d76949ed"
   integrity sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg==
 
+"@expo-google-fonts/dm-sans@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/dm-sans/-/dm-sans-0.2.2.tgz#66bfead953b9ab03ad029bfc19a882ee1f731416"
+  integrity sha512-N3bBC9igoebddvQ6+0mnmRV3OF0CtzT/NSzrztWZ7cez1oG6MplA/7e1EMKyGGkhdCUNwjqDJOk+ggEzFyz7KQ==
+
+"@expo-google-fonts/dm-serif-display@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/dm-serif-display/-/dm-serif-display-0.2.2.tgz#288903efb22c516b728a40f16dc6ffb3dd0f3b39"
+  integrity sha512-Yi0+9lIoE6dp+m+KvcE9RoSurBjk6Ci2Xx8y8ATjWx0xujKepT+hRWcSuahbaZhPd5vWI5V4DrybOUZT74p4Tw==
+
 "@expo/config-plugins@4.0.16", "@expo/config-plugins@^4.0.2":
   version "4.0.16"
   resolved "https://registry.yarnpkg.com/@expo/config-plugins/-/config-plugins-4.0.16.tgz#832fb533245180c6dfd82fd359474f68a8e857b2"
@@ -2623,6 +2633,13 @@ expand-brackets@^2.1.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
+expo-app-loading@~1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/expo-app-loading/-/expo-app-loading-1.3.0.tgz#2023f11e1420d423478474942c0d1c74e1afa335"
+  integrity sha512-IbMI1w2a79IXw2uH/dgwxWmXW9uR5DNjY/mDKdUCGR0tjMeeliZRq66gGdRLgCkfXS2b2WMIi03gB05l7SiQeg==
+  dependencies:
+    expo-splash-screen "~0.14.0"
+
 expo-application@~4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/expo-application/-/expo-application-4.0.2.tgz#860dbd12132a56de7cf75fe7b5146b6cd97ed30e"
@@ -2691,7 +2708,7 @@ expo-modules-core@0.6.5:
     compare-versions "^3.4.0"
     invariant "^2.2.4"
 
-expo-splash-screen@~0.14.1:
+expo-splash-screen@~0.14.0, expo-splash-screen@~0.14.1:
   version "0.14.2"
   resolved "https://registry.yarnpkg.com/expo-splash-screen/-/expo-splash-screen-0.14.2.tgz#2598d6980e71ecd8b7467ca821fb9dbfb80f355b"
   integrity sha512-X25D/0E2AWEFGgDWIVXZ5Bl7FhYk7TgVhEWvplBqrDY7G7vg5l1aoH6PelOQINWPsa1dcRyA7REdN2ltO+0LAw==
