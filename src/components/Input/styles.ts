@@ -8,8 +8,8 @@ type Props = {
 };
 
 export const Container = styled(TextInput).attrs<Props>(({ theme, type }) => ({
-  placeHolderTextColor:
-    type === "primary" ? theme.COLORS.SECONDARY_900 : theme.COLORS.PRIMARY_50,
+  placeholderTextColor:
+    type === "primary" ? theme.COLORS.SECONDARY_900 : theme.COLORS.TITLE,
 }))<Props>`
   width: 100%;
   height: 56px;
