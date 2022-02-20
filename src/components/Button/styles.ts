@@ -30,4 +30,4 @@ export const Title = styled.Text`
 
 export const Load = styled.ActivityIndicator.attrs(({ theme }) => ({
   color: theme.COLORS.TITLE,
-}));
+}))``;
