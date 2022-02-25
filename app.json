@@ -5,7 +5,13 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "android": {
+      "package": "com.mrrioja.goPizza"
+    },
+    "ios": {
+      "bundleIdentifier": "com.mrrioja.goPizza"
+    }
   },
   "name": "goPizza"
 }
