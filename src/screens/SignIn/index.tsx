@@ -18,10 +18,14 @@ import brandImg from "@assets/brand.png";
 export function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { signIn, isLogging } = useAuth();
+  const { signIn, forgotPassword, isLogging } = useAuth();
 
   function handleSignIn() {
     signIn(email, password);
+  }
+
+  function handleForgotPassword() {
+    forgotPassword(email);
   }
 
   return (
@@ -47,7 +51,7 @@ export function SignIn() {
             secureTextEntry
           />
 
-          <ForgotPasswordButton>
+          <ForgotPasswordButton onPress={handleForgotPassword}>
             <ForgotPasswordLabel>Esqueci minha senha</ForgotPasswordLabel>
           </ForgotPasswordButton>
 
