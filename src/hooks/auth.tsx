@@ -130,7 +130,7 @@ function AuthProvider({ children }: AuthProviderProps) {
 
   useEffect(() => {
     loadUserStorageData();
-  });
+  }, []);
 
   return (
     <AuthContext.Provider
