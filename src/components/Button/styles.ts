@@ -4,6 +4,7 @@ export type TypeProps = "primary" | "secondary";
 
 type ContainerProps = {
   type: TypeProps;
+  enabled: boolean;
 };
 
 export const Container = styled.TouchableOpacity<ContainerProps>`
