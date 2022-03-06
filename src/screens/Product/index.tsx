@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { Alert, Platform, ScrollView, TouchableOpacity } from "react-native";
+import {
+  Alert,
+  Platform,
+  ScrollView,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import firestore from "@react-native-firebase/firestore";
 import storage from "@react-native-firebase/storage";
 import { ProductNavigationProps } from "@src/@types/navigation";
-import { useRoute } from "@react-navigation/native";
+import { useRoute, useNavigation } from "@react-navigation/native";
 
 import { Photo } from "@src/components/Photo";
 import { Input } from "@src/components/Input";
@@ -47,6 +53,7 @@ export function Product() {
   const [isLoading, setIsLoading] = useState(false);
 
   const route = useRoute();
+  const navigation = useNavigation();
   const { id } = route.params as ProductNavigationProps;
 
   async function handlePickerImage() {
@@ -102,12 +109,30 @@ export function Product() {
         photoUrl,
         photo_path: reference.fullPath,
       })
-      .then(() => Alert.alert("Cadastro", "Pizza cadastrada com sucesso."))
-      .catch(() =>
-        Alert.alert("Cadastro", "Não foi possível cadastrar a pizza.")
-      );
+      .then(() => navigation.navigate("home"))
+      .catch(() => {
+        setIsLoading(false);
+        Alert.alert("Cadastro", "Não foi possível cadastrar a pizza.");
+      });
+  }
 
-    setIsLoading(false);
+  function handleDelete() {
+    firestore()
+      .collection("pizzas")
+      .doc(id)
+      .delete()
+      .then(() => {
+        storage()
+          .ref(photoPath)
+          .delete()
+          .then(() => {
+            navigation.navigate("home");
+          });
+      });
+  }
+
+  function handleGoBack() {
+    navigation.goBack();
   }
 
   useEffect(() => {
@@ -134,21 +159,28 @@ export function Product() {
     <Container behavior={Platform.OS === "ios" ? "padding" : undefined}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Header>
-          <BackButton />
+          <BackButton onPress={handleGoBack} />
           <Title>Cadastrar</Title>
 
-          <TouchableOpacity>
-            <DeleteLabel>Deletar</DeleteLabel>
-          </TouchableOpacity>
+          {id ? (
+            <TouchableOpacity>
+              <DeleteLabel onPress={handleDelete}>Deletar</DeleteLabel>
+            </TouchableOpacity>
+          ) : (
+            <View style={{ width: 20 }} />
+          )}
         </Header>
 
         <Upload>
           <Photo uri={image} />
-          <PickImageButton
-            title="Carregar"
-            type="secondary"
-            onPress={handlePickerImage}
-          />
+
+          {!id && (
+            <PickImageButton
+              title="Carregar"
+              type="secondary"
+              onPress={handlePickerImage}
+            />
+          )}
         </Upload>
 
         <Form>
@@ -190,11 +222,13 @@ export function Product() {
             />
           </InputGroup>
 
-          <Button
-            title="Cadastrar pizza"
-            isLoading={isLoading}
-            onPress={handleAdd}
-          />
+          {!id && (
+            <Button
+              title="Cadastrar Pizza"
+              isLoading={isLoading}
+              onPress={handleAdd}
+            />
+          )}
         </Form>
       </ScrollView>
     </Container>
