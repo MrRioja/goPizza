@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Alert, Platform, ScrollView, TouchableOpacity } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import firestore from "@react-native-firebase/firestore";
 import storage from "@react-native-firebase/storage";
+import { ProductNavigationProps } from "@src/@types/navigation";
+import { useRoute } from "@react-navigation/native";
 
 import { Photo } from "@src/components/Photo";
+import { Input } from "@src/components/Input";
+import { Button } from "@src/components/Button";
 import { BackButton } from "@src/components/BackButton";
+import { InputPrice } from "@src/components/InputPrice";
+import { ProductProps } from "@components/ProductCard";
 
 import {
   Container,
@@ -20,9 +26,15 @@ import {
   InputGroupHeader,
   MaxCharacters,
 } from "./styles";
-import { InputPrice } from "@src/components/InputPrice";
-import { Input } from "@src/components/Input";
-import { Button } from "@src/components/Button";
+
+type PizzaResponse = ProductProps & {
+  photo_path: string;
+  prices_sizes: {
+    p: string;
+    m: string;
+    g: string;
+  };
+};
 
 export function Product() {
   const [image, setImage] = useState("");
@@ -31,7 +43,11 @@ export function Product() {
   const [priceSizeP, setPriceSizeP] = useState("");
   const [priceSizeM, setPriceSizeM] = useState("");
   const [priceSizeG, setPriceSizeG] = useState("");
+  const [photoPath, setPhotoPath] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+
+  const route = useRoute();
+  const { id } = route.params as ProductNavigationProps;
 
   async function handlePickerImage() {
     const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
@@ -93,6 +109,26 @@ export function Product() {
 
     setIsLoading(false);
   }
+
+  useEffect(() => {
+    if (id) {
+      firestore()
+        .collection("pizzas")
+        .doc(id)
+        .get()
+        .then((response) => {
+          const product = response.data() as PizzaResponse;
+
+          setName(product.name);
+          setImage(product.photoUrl);
+          setPhotoPath(product.photo_path);
+          setDescription(product.description);
+          setPriceSizeP(product.prices_sizes.p);
+          setPriceSizeM(product.prices_sizes.m);
+          setPriceSizeG(product.prices_sizes.g);
+        });
+    }
+  }, [id]);
 
   return (
     <Container behavior={Platform.OS === "ios" ? "padding" : undefined}>
