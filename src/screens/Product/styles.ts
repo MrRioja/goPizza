@@ -19,7 +19,7 @@ export const Header = styled(LinearGradient).attrs(({ theme }) => ({
 `;
 
 export const Title = styled.Text`
-  font-size: 14px;
+  font-size: 24px;
 
   ${({ theme }) => css`
     font-family: ${theme.FONTS.TITLE};
