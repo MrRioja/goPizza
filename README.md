@@ -28,11 +28,55 @@
 
 ## Sobre
 
+O GoPizza é uma aplicação voltada para pizzarias que foi desenvolvida durante o bootCamp Ignite da RocketSeat na trilha de React Native. A ideia foi, além de fixar os conceitos básicos do React Native, integrar nosso app com os serviços do Firebase.
+
 ## goPizza
 
-[DETALHES DO APP]
+O GoPizza é uma aplicação criada em React Native cujo objetivo é servir como plataforma de atendimento para pizzarias. A aplicação possui dois tipos de usuários, cada qual com suas funcionalidades distintas dentro do app, as quais veremos mais abaixo.
 
-<br><br><br>
+Para logar na aplicação, os usuários, independentemente do tipo, devem informar seu e-mail e senha de acesso para se autenticarem na aplicação, conforme tela abaixo:
+
+<img src="./readme/login-screen.png" width="250px" />
+
+Caso o usuário tenha esquecido a senha, basta digitar seu e-mail e clicar no link de **Esqueci minha senha** para que um e-mail seja enviado para que ele reset sua senha.
+
+Vamos agora detalhar as telas e funcionalidades dos nossos dois tipos de usuários:
+
+### Usuário administrador
+
+O usuário com perfil de administrador terá como responsabilidade cadastrar e remover pizzas conforme a disponibilidade dos sabores na pizzaria em que trabalha.
+
+Ao logar na aplicação ele irá se deparar com a home, onde serão listadas as pizzas já disponíveis para os clientes, além disso terá a opção de buscar um sabor especifico ou ainda cadastrar um novo sabor no botão que está na parte inferior da tela, conforme imagem abaixo:
+
+<img src="./readme/home-admin.png" width="250px" />
+
+Ao clicar em uma das pizzas da lista será possível ver o cadastro completo dela ou realizar sua exclusão clicando no botão localizado no canto superior direito:
+
+<img src="./readme/details-admin.png" width="250px" />
+
+Caso o administrador desejar poderá realizar o cadastro de um novo sabor. Após clicar no botão de cadastro disponível na home, ele será direcionado para o formulário abaixo para preencher os dados da pizza:
+
+<img src="./readme/add-pizza-admin.png" width="250px" />
+
+E pronto, após informar os dados da nova pizza, ela já será disponibilizada para os clientes, fechando assim a lista de todas as ações possíveis para esse tipo de usuário.
+
+### Usuário atendente
+
+O usuário com perfil de atendente terá como responsabilidade cadastrar os pedidos das mesas das pizzarias, informando para a sua equipe quais os sabores, tamanhos e quantidades cada cliente está solicitando.
+
+Ao logar na aplicação ele irá se deparar com a home, onde serão listados os sabores de pizzas disponíveis para pedidos na aba **Cardápio**, conforme exemplificado abaixo:
+
+<img src="./readme/home-user.png" width="250px" />
+
+Após o cliente escolher o sabor desejado, o atendente irá clicar sobre ele e a tela abaixo será exibida para que ele preencha qual será o tamanho, a quantidade e qual é o número da mesa do cliente:
+
+<img src="./readme/order-user.png" width="250px" />
+
+Com os pedidos registrados, o atendente responsável será notificado assim que algum de seus pedidos ficar pronto. Assim que estiver pronto, basta ele clicar no pedido e confirmar quando ele for entregue. Cada etapa desse fluxo está representada nas seguintes telas respectivamente:
+
+|                       Pedido pronto                        |                     Confirmação de entrega                     |                     Pedido entregue                     |
+| :--------------------------------------------------------: | :------------------------------------------------------------: | :-----------------------------------------------------: |
+| <img src="./readme/order-finish-user.png" width="200px" /> | <img src="./readme/delivery-confirm-user.png" width="200px" /> | <img src="./readme/delivered-user.png" width="200px" /> |
 
 ## Instalação
 
