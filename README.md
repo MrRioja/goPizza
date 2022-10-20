@@ -60,6 +60,10 @@ Caso o administrador desejar poderá realizar o cadastro de um novo sabor. Após
 
 E pronto, após informar os dados da nova pizza, ela já será disponibilizada para os clientes, fechando assim a lista de todas as ações possíveis para esse tipo de usuário.
 
+Abaixo uma demonstração do aplicativo em funcionamento aonde é ilustrado a exclusão e cadastro de uma pizza:
+
+![Demonstração do app - Admin](./readme/demo-admin-app.gif)
+
 ### Usuário atendente
 
 O usuário com perfil de atendente terá como responsabilidade cadastrar os pedidos das mesas das pizzarias, informando para a sua equipe quais os sabores, tamanhos e quantidades cada cliente está solicitando.
@@ -77,6 +81,10 @@ Com os pedidos registrados, o atendente responsável será notificado assim que 
 |                       Pedido pronto                        |                     Confirmação de entrega                     |                     Pedido entregue                     |
 | :--------------------------------------------------------: | :------------------------------------------------------------: | :-----------------------------------------------------: |
 | <img src="./readme/order-finish-user.png" width="200px" /> | <img src="./readme/delivery-confirm-user.png" width="200px" /> | <img src="./readme/delivered-user.png" width="200px" /> |
+
+Abaixo uma demonstração do aplicativo em funcionamento aonde é ilustrado todas as etapas do pedido, da solicitação à entrega:
+
+![Demonstração do app - User](./readme/demo-user-app.gif)
 
 ## Instalação
 
