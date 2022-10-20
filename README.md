@@ -62,7 +62,7 @@ E pronto, após informar os dados da nova pizza, ela já será disponibilizada p
 
 Abaixo uma demonstração do aplicativo em funcionamento aonde é ilustrado a exclusão e cadastro de uma pizza:
 
-![Demonstração do app - Admin](./readme/demo-admin-app.gif)
+<img src="./readme/demo-admin-app.gif" width="350px" alt="Demonstração do app - Admin" />
 
 ### Usuário atendente
 
@@ -84,7 +84,7 @@ Com os pedidos registrados, o atendente responsável será notificado assim que 
 
 Abaixo uma demonstração do aplicativo em funcionamento aonde é ilustrado todas as etapas do pedido, da solicitação à entrega:
 
-![Demonstração do app - User](./readme/demo-user-app.gif)
+<img src="./readme/demo-user-app.gif" width="350px" alt="Demonstração do app - User" />
 
 ## Instalação
 
