@@ -3,7 +3,7 @@
   <br>
 </p>
 <h3 align="center">
-  GoPizza, Pizzas como você nunca viu!
+  GoPizza, pizzas como você nunca viu!
 </h3>
 
 <br><br>
