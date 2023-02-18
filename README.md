@@ -114,11 +114,7 @@ $ yarn start
 
 ## Tecnologias
 
-<img align="left" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="75" />
-
-<img align="left" src="https://firebase.google.com/static/downloads/brand-guidelines/PNG/logo-standard.png?hl=pt-br" alt="Firebase" height="75" />
-
-<br><br><br><br>
+[![My Skills](https://skillicons.dev/icons?i=react,firebase,ts)](https://skillicons.dev)
 
 ## Autor
 
