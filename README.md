@@ -6,15 +6,12 @@
   GoPizza, pizzas como você nunca viu!
 </h3>
 
-<br><br>
-
 <p align="center">
   <img src="https://img.shields.io/static/v1?label=GO&message=PIZZA&color=blueviolet&style=for-the-badge"/>
   <img src="https://img.shields.io/github/license/MrRioja/goPizza?color=blueviolet&logo=License&style=for-the-badge"/>
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/MrRioja/goPizza?color=blueviolet&logo=TypeScript&logoColor=white&style=for-the-badge">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/MrRioja/goPizza?color=blueviolet&style=for-the-badge">
 </p>
-<br>
 
 <p align="center">
   <a href="#sobre">Sobre</a> •
@@ -23,8 +20,6 @@
   <a href="#tecnologias">Tecnologias</a> •
   <a href="#autor">Autor</a>  
 </p>
-
-<br><br>
 
 ## Sobre
 
